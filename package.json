@@ -16,9 +16,10 @@
   "bugs": {
     "url": "https://github.com/DanMayer218/DMfriendfinder/issues"
   },
-  "homepage": "https://github.com/DanMayer218/DMfriendfinder#readme",
+  "homepage": "https://github.com/DanMayer218/DMfriendfinder#home.html",
   "dependencies": {
     "express": "^4.17.1",
+    "heroku": "^7.33.3",
     "path": "^0.12.7"
   }
 }

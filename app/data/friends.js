@@ -1,4 +1,4 @@
-var friends =[
+var friends = [
 
     {
         name:"Ahmed",
@@ -114,4 +114,4 @@ var friends =[
       }
 ];
 
-module.exports = friends;
+module.exports = friends.js;
