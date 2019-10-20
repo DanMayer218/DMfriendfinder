@@ -1,6 +1,6 @@
 
-var friends = require("./app/data/friendss.js");
-
+// import friends, { length, push } from "./data/friends";
+var friends = require("app/data/friends.js");
 module.exports = function(app) {
     app.get("/api/friends", function(req, res) {
         res.json(friends);
@@ -38,7 +38,7 @@ console.log("Sum of the Users score " + sum);
 console.log("Your matches!! " + yourMatches.friendDifference);
 console.log("******************************==============================");
 
-for (var i = 0; i < friends.length; i++) {
+for (var i = 0; i < length; i++) {
   console.log(friends[i].name);
   totalDifference = 0;
   console.log("Total Diff " + totalDifference);
@@ -58,7 +58,7 @@ for (var i = 0; i < friends.length; i++) {
   }
 
   console.log(yourMatches);
-  friends.push(userData);
+  push(userData);
   console.log("New User Added");
   console.log(userData);
   res.json(yourMatches);

@@ -113,5 +113,6 @@ var friends = [
           ]
       }
 ];
-
 module.exports = "friends";
+
+// export default friends;
