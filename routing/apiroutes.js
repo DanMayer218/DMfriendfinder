@@ -1,14 +1,14 @@
 
-var friends = require("../data/friends.js");
+var friends = require("../data/friends");
 
 module.exports = function(app) {
 
-    app.get("/api/friends.js", function(req, res) {
+    app.get("/api/friends", function(req, res) {
         res.json(friends);
       });
 
       // The post method which will house the user input data that will be stored in the friends.js file
-      app.post("/api/friends.js", function(req, res) {
+      app.post("/api/friends", function(req, res) {
         var friendcompare = 0;
         var yourMatches = {
             name: "",
