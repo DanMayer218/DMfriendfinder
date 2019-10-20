@@ -1,5 +1,5 @@
 
-var friends = require("app/data/friends");
+var friends = require("./app/data/friendss.js");
 
 module.exports = function(app) {
     app.get("/api/friends", function(req, res) {
@@ -8,11 +8,11 @@ module.exports = function(app) {
 
       // The post method which will house the user input data that will be stored in the friends.js file
       app.post("/api/friends", function(req, res) {
-        var friendcompare = 0;
+        var totalDifference = 0;
         var yourMatches = {
             name: "",
             photo: "",
-            friendcompare: 1000
+            friendDifference: 1000
         };
 
 
@@ -35,24 +35,24 @@ console.log("User Score: " + userScores);
 
 var sum = s.reduce((a,b) => a + b, 0);
 console.log("Sum of the Users score " + sum);
-console.log("Your matches!! " + yourMatches.friendcompare);
+console.log("Your matches!! " + yourMatches.friendDifference);
 console.log("******************************==============================");
 
 for (var i = 0; i < friends.length; i++) {
   console.log(friends[i].name);
   totalDifference = 0;
   console.log("Total Diff " + totalDifference);
-  console.log("Best match friend diff " + yourMatches.friendcompare);
+  console.log("Best match friend diff " + yourMatches.friendDifference);
 
   var sfriendScore = friends[i].scores.reduce((a,b) => a + b,0);
   console.log("Total friend score " + sfriendScore);
   totalDifference += Math.abs(sum - sfriendScore);
   console.log("--------------------------------> " + totalDifference);
 
-  if (totalDifference <= yourMatches.friendcompare) {
+  if (totalDifference <= yourMatches.friendDifference) {
     yourMatches.name = friends[i].name;
     yourMatches.photo = friends[i].photo;
-    yourMatches.friendcompare = totalDifference;
+    yourMatches.friendDifference = totalDifference;
 
     console.log(totalDifference = " Total Difference");
   }
