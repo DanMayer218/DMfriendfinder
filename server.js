@@ -3,7 +3,7 @@ var bodyParser = require("body-parser");
 var path = require("path");
 
 var app = express();
-var PORT = process.env.PORT || 8080;
+var PORT = process.env.PORT || 3000;
 
 
 app.use(bodyParser.json());
@@ -16,8 +16,8 @@ app.use(bodyParser.json({ type: "application/vnd.api+json" }));
 
 app.use(express.static("app/public"));
 
-require("./routing/apiroutes.js")(app);
-require("./routing/htmlroutes.js")(app);
+require("./routing/apiroutes").default(app);
+require("./routing/htmlroutes")(app);
 
 
 
