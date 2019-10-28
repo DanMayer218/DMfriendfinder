@@ -1,6 +1,10 @@
 
 // import friends, { length, push } from "./data/friends";
+<<<<<<< HEAD
 var friends = require("/data/friends.js");
+=======
+var friends = require("./data/friends.js");
+>>>>>>> ed65fb9271a3936cdb17ac725993bbf41c2ff3a6
 module.exports = function(app) {
     app.get("/api/friends", function(req, res) {
         res.json(friends);
